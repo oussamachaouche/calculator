@@ -47,17 +47,26 @@ else{saisir.value += valButoon;
 
 })
 
-saisir.addEventListener("keypress",(event)=>{
 
-var allowedCharacters = /[0-9.+*/-]/;
-    var key = event.key;
+saisir.addEventListener("input", () => {
+  // Remove any non-numeric characters and operators from the input value
+  const newValue = saisir.value.replace(/[^0-9+\-*/.]/g, "");
+
+  // Update the input field value with the cleaned value
+  saisir.value = newValue;
+});
+
+//saisir.addEventListener("keypress",(event)=>{
+
+//var allowedCharacters = /[0-9.+*/-]/;
+/*     var key = event.key;
     console.log("key "+key+" allowed",allowedCharacters.test(key))
     if (!allowedCharacters.test(key)) {
         console.log("allowed");
       event.preventDefault();
     }
 
-})
+}) */
 
 
 
@@ -77,13 +86,7 @@ arr.forEach((element, index) => {
     document.body.classList.remove("theme1","theme2","theme3");
     document.body.classList.add(themeClass)
     element.style.opacity = "1";
-    // if (index == 0) {
-    //     setTheme("theme1");
-    // } else if (index == 1) {
-    //     setTheme("theme2");
-    // } else {
-      
-    // }
+
     arr
       .filter(function (item) {
         return item != element;
@@ -95,19 +98,3 @@ arr.forEach((element, index) => {
 });
 
 
-
-
-
-/*
-function setTheme(theme) {
-    var themes = ["theme1", "theme2"];
-    for (var i=0; i < themes.length; i++) {
-
-      var styleSheet = document.getElementById(themes[i]);
-      if (themes[i] == theme) {
-        styleSheet.removeAttribute("disabled");
-      } else {
-        styleSheet.setAttribute("disabled", "disabled");
-      }      
-    }
-}*/

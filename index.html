@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" id="theme1">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Calculator app</title>
@@ -11,8 +11,35 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 
 </head>
-<body>
-<div class="main">
+<body class="theme1" >
+<div class="main" id="main">
+
+
+   <div class="bar__toggle">
+    <span class="calc__name">ألة حاسبة</span>
+    <div class="theme__main">
+      <span class="theme__name">theme</span>
+      <div class="main__toggle">
+
+        <div class="mainSpan__toggle">
+          <span class="span_toggle">1</span>
+          <span class="span_toggle">2</span>
+          <span class="span_toggle">3</span>
+        </div>
+        <div class="tri-state-toggle">
+          <input class="button_toggle" type="radio" name="toggle" id="one" theme="theme1" />
+          <input class="button_toggle" type="radio" name="toggle" id="two" theme="theme2" />
+          <input class="button_toggle" type="radio" name="toggle" id="three" theme="theme3" />
+        </div>
+       </div>
+
+    </div>
+    
+
+
+   </div>
+ 
+
 
   <div class="result__calculator"> <input type="text" id="result" class="result__input" placeholder="enter operation"> 
     <output id="result__output" class="display__r" ></output>
@@ -39,7 +66,7 @@
     <button class="btn__calculator">/</button>
     <button class="btn__calculator">*</button>
     <button class="btn__calculator__reset">RESET</button>
-    <button class="btn__calculator__etoile">=</button>
+    <button class="btn__calculator__eqaul">=</button>
 
 
 
@@ -51,7 +78,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Oussama Chaouche</a>.
   </div>
 
 

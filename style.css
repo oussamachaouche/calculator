@@ -1,50 +1,108 @@
+body.theme1 {
+    --background--main: hsl(222, 26%, 31%);
+    --backgroundMainCalculator: hsl(224, 36%, 15%);
+    --backroundBtnDell:hsl(225, 21%, 49%);
+    --bagroundBtnEqual: hsl(6, 63%, 50%);
+    --backgroundBtnHover:hsl(28, 16%, 65%);
+    --backgroundEqualHover:hsl(6, 70%, 34%);
+    --backgroundResultCalculator:black;
+    --backroundResultInput:rgb(87, 87, 87);
+    --textColorReslutInput:rgba(255, 255, 255, 0.899);
+    --backgroundBtnToggle:rgb(198, 27, 27);
+    --backgroundTriStaeTogle:hsl(223, 31%, 20%);
+    --backGroundKeys:hsl(30, 25%, 89%);
+    --colorTextToggle:#fff;
+    --borderButtons:3px solid hsl(29, 52%, 86%); 
+    --colorTextTheme:#fff;
+}
+
+body.theme2 {
+    --background--main: hsl(0, 0%, 90%);
+    --backgroundMainCalculator: hsl(0, 5%, 81%);
+    --backroundBtnDell: hsl(185, 58%, 25%);
+    --bagroundBtnEqual: hsl(25, 98%, 40%);
+    --backgroundBtnHover:hsl(185, 58%, 25%);
+    --backgroundEqualHover:hsl(25, 99%, 27%);
+    --backgroundResultCalculator:hsl(0, 0%, 93%);
+    --backroundResultInput:hsl(0, 0%, 93%);
+    --textColorReslutInput:hsl(60, 10%, 19%);
+    --backgroundBtnToggle:hsl(25, 98%, 40%);
+    --backgroundTriStaeTogle:hsl(0, 5%, 81%);
+    --backGroundKeys:hsl(30, 25%, 89%);
+    --colorTextToggle:black;
+    --borderButtons:3px solid hsl(30, 37%, 80%); 
+    --colorTextTheme:black;
+}
+body.theme3 {
+    --background--main: hsl(268, 75%, 9%);
+    --backgroundMainCalculator: hsl(268, 71%, 12%);
+    --backroundBtnDell: hsl(281, 89%, 26%);
+    --bagroundBtnEqual: hsl(176, 100%, 44%);;
+    --backgroundBtnHover:hsl(285, 91%, 52%);
+    --backgroundEqualHover:hsl(177, 92%, 70%);
+    --backgroundResultCalculator:hsl(268, 71%, 12%);
+    --backroundResultInput:hsl(268, 71%, 12%);
+    --textColorReslutInput:hsl(52, 100%, 62%);
+    --backgroundBtnToggle:hsl(176, 100%, 44%);
+    --backgroundTriStaeTogle:hsl(268, 71%, 12%);
+    --backGroundKeys:hsl(268, 47%, 21%);
+    --colorTextToggle:hsl(52, 100%, 62%);
+    --borderButtons:3px solid transparent; 
+    --colorTextTheme:hsl(52, 100%, 62%);
+}
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+
+
+
+/* theme1 */
 .main{
     display: flex;
    flex-direction: column;
    justify-content: space-between; 
     align-items: center;
     gap: 10px;
-    background-color: rgba(66, 130, 241, 0.562);
-    padding: 6rem;
+    background-color:  var(--background--main);
+    padding: 6.5rem;
 }
 
 .main__Calculator{
  display: grid;
- background-color: rgb(2, 7, 6);
+ background-color:  var(--backgroundMainCalculator);
  grid-template-columns: 75px 75px 75px 75px;
-justify-content: center;
+ justify-content: center;
  align-items: center;
- width: 330px;
- 
+ width: 370px;
  border-radius: 10px;
- grid-gap: 10px;
- 
- padding: 20px;
-
+ grid-gap: 15px;
+ padding: 10px;
 }
 .btn__calculator{
     border-radius: 10px;
-    border: 2px solid black;
     font-size: 2rem;
-    
+    border:var(--borderButtons); 
+    background-color: var(--backGroundKeys);
 }
 
+
+
 .btn__calculator_dell{
-    background-color: rgba(105, 140, 236, 0.678);
+    background-color: var(--backroundBtnDell);
     border-radius: 10px;
     border: 2px solid rgba(51, 124, 166, 0.532);
     font-size: 15px;
     font-weight: 700;
     height: 2.7rem;
     color: #fff;
-
 }
+
+
+
 .btn__calculator__reset{
-    background-color: rgba(105, 140, 236, 0.678);
+    background-color: var(--backroundBtnDell);
     color: #fff;
     border-radius: 10px;
     border: none;
@@ -55,13 +113,10 @@ justify-content: center;
     grid-column: 1 / span 2;
     grid-row: 5;
     margin: auto;
-   
-
-   
     padding: 0px;
 }
-.btn__calculator__etoile{
-    background-color: red;
+.btn__calculator__eqaul{
+    background-color: var(--bagroundBtnEqual);
     color: #fff;
     font-size: 30px;
    padding: 0px;
@@ -76,11 +131,26 @@ justify-content: center;
   
 }
 
+.btn__calculator:hover {
+    background-color:var(--backgroundBtnHover);
+    transition: 0.7s;
+}
+
+.btn__calculator_dell:hover,.btn__calculator__reset:hover {
+    background-color:hsl(224, 28%, 35%) ;
+    transition: 0.7s;
+}
+.btn__calculator__eqaul:hover{
+    background-color:var(--backgroundEqualHover);
+    transition: 0.7s;
+}
+
+
 .result__calculator{
-    width: 330px;
+    width: 370px;
     text-align: center;
     height: 50px;
-    background-color: black;
+    background-color: var(--backgroundResultCalculator);
     border-radius: 10px;
     
     padding: 10px;
@@ -89,16 +159,146 @@ justify-content: center;
 .result__input{
     width: 100%;
     text-align: center;
-    background-color: rgb(87, 87, 87);
+    background-color: var(--backroundResultInput);
     border: none;
     outline: none;
-    color: rgba(255, 255, 255, 0.899);
+    color: var(--textColorReslutInput);
     padding-bottom: 10px;
     border-radius: 10px;
     font-size: 20px;
 
 }
 .display__r{
-    color:#fff;
+    color:var(--textColorReslutInput);
     padding: 10px;
 }
+
+
+
+.button_toggle {
+
+    height: 15px;
+    width: 15px;
+    appearance: none;
+    background-color: var(--backgroundBtnToggle);
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  .button_toggle:hover {
+    cursor: pointer;
+  }
+  .tri-state-toggle {
+   
+    display:  flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid rgba(0,0,0, 0.25);  
+    border-radius: 50px;
+    background-color:  var(--backgroundTriStaeTogle);
+    height: 15px;
+   
+  }
+  #one {
+    opacity: 1;
+  }
+
+  .main__toggle{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .mainSpan__toggle{
+    display:  flex;
+    justify-content: space-evenly;
+
+  }
+
+  .span_toggle{
+   text-align: center;
+    color:var(--colorTextToggle);
+    height: 30px;
+    width: 30px;
+}
+
+
+.bar__toggle{
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+    
+
+}
+.theme__main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .theme__name {
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-bottom: 2.5px;
+    color: var(--colorTextTheme);
+    font-weight: 700;
+  }
+
+  .calc__name{
+    align-self: center;
+    color: var(--colorTextTheme);
+    font-weight: 700;
+    margin-top: 15px;
+  }
+
+
+  /*mobile*/
+
+
+  @media screen and (max-width: 600px) {
+
+    .main{
+  
+        padding: 2.5rem;
+
+        padding-bottom: 5rem;
+    }
+
+    .main__Calculator{
+        grid-template-columns: 50px 50px 50px 50px;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        border-radius: 10px;
+        grid-gap: 15px;
+        padding: 10px;
+       } 
+
+
+       .result__calculator{
+        width: 270px;
+       
+      
+    }
+
+    .bar__toggle{
+        width: 290px;
+        
+    
+    }
+
+    .btn__calculator__eqaul{
+     
+        height: 2.7rem;
+        width: 100px;
+
+      
+    }
+
+    
+.btn__calculator__reset{
+
+    height: 2.7rem;
+    width: 100px;
+
+}
+  }
